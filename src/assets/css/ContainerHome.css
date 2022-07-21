@@ -1,0 +1,59 @@
+.containerHome{
+    z-index: 1;
+}
+.containerLeft{
+    background-color:#001d32;
+}
+.boxBuy {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    /* background-color: red; */
+}
+.text-box{
+    padding:10px;
+}
+.text-box h1{
+    font-weight: bold;
+    color:transparent;
+    -webkit-text-stroke: 1px #fff;
+    background:url('../img/back.png');
+    /* background-color: white; */
+    -webkit-background-clip: text;
+    background-position:0 0;
+    animation:back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+
+}
+.text-box h2{
+    font-size:25px;
+    font-weight: 500;
+    color:white;
+}
+.text-box h3{
+    font-size:20px;
+    font-weight: 500;
+    color:white;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* input[type="number"]{ */
+    /* outline: none; */
+    /* font-size:40px; */
+/* } */
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
