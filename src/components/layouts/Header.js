@@ -92,14 +92,14 @@ const Header = () => {
                     <div className="mx-2 table:mx-5 flex laptop:hidden">
                         {/* <button><AiOutlineMenu /></button> */}
                         <div className="btnMenu">
-                            {/* <button onClick={onHandleClickMenu} className="p-3 rounded-full bg-white">{isClickHandleMenu ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}</button> */}
+                            <button onClick={onHandleClickMenu} className="p-3 rounded-full bg-white">{isClickHandleMenu ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}</button>
                         </div>
                         <div className="">
                             {(() => {
                                 if (isClickHandleMenu) {
                                     return (
                                         // <>
-                                        <div className="MenuHeader top-28 right-0 bg-white w-52 bigMobile:px-0 bigMobile:w-96 h-auto rounded-xl">
+                                        <div className="MenuHeader absolute top-28 right-0 bg-white w-52 bigMobile:px-0 bigMobile:w-96 h-auto rounded-xl">
                                             <div className="header-center p-5 rounded-xl">
                                                 <button href="#" className="w-full p-2 text-center text-black hover:bg-sky-600 hover:text-white hover:rounded-full hover:font-bold w-20 h-10">Home</button>
                                                 <button href="#" className="w-full p-2 text-center text-black hover:bg-sky-600 hover:text-white hover:rounded-full hover:font-bold w-20 h-10">About</button>
@@ -118,7 +118,7 @@ const Header = () => {
                                                                         return (
                                                                             <div className={`block bigMobile:hidden boxAddressUserInfo w-full h-auto p-1 rounded absolute top-full right-0 bg-white z-20 `}>
                                                                                 <button className="boxAddressUserInfo-header w-full my-2 border-b-2 flex justify-between items-center p-2">
-                                                                                    <h1 className="font-bold">Address</h1>
+                                                                                    <h1 className="font-bold text-xl bigMobile:text-lg">Address</h1>
                                                                                     <button className="p-2 px-3 rounded drop-shadow-lg border-black bg-gray-100">Disconnect</button>
                                                                                 </button>
                                                                                 <div className={'boxAddressUserInfo-body '}>
@@ -150,7 +150,7 @@ const Header = () => {
                                                         );
                                                     } else {
                                                         return (
-                                                            <button onClick={handleClickWallet} className="border-t-2 w-full rounded-full bg-sky-600 text-white p-3 font-bold ">Connect Wallet</button>
+                                                            <button onClick={handleClickWallet} className="border-t-2 w-full rounded-full bg-sky-600 text-white p-3 font-bold block bigMobile:hidden">Connect Wallet</button>
                                                         )
                                                     }
                                                 })()}
@@ -218,6 +218,7 @@ const Header = () => {
                         } else {
                             return (
                                 <button onClick={handleClickWallet} className="rounded-full bg-sky-600 text-white p-3 font-bold hidden bigMobile:block">Connect Wallet</button>
+                                // <></>
                             )
                         }
                     })()}
