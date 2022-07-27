@@ -38,6 +38,11 @@ module.exports = {
       lineHeight: {
         'extra-loose': '2.5',
         '12': '3rem',
+        '5px':'5px',
+        '10px':'10px',
+        '20px':'20px',
+        '30px':'30px',
+        '40px':'40px',
         '50px':'50px',
         '60px':'60px',
         '70px':'70px',
